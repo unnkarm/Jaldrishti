@@ -1,5 +1,6 @@
+
 .home {
-  margin-top: 70px; /* Push below navbar */
+   /* Push below navbar */
   position: relative;
   width: 100%;
   min-height: 100vh; /* Changed from height to min-height */
@@ -12,7 +13,7 @@
 .hero-section {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 100vh;
 }
 
 
@@ -24,7 +25,7 @@
 
 .carousel-container img {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   object-fit: cover;
 }
 

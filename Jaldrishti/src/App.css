@@ -1,5 +1,5 @@
 .App {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
   background-color: #a9caeb;
   color: #002b5b;
   min-height: 100vh;
@@ -8,8 +8,10 @@
 }
 
 .main-content {
+  width: 100% auto;
+  height: 100%;
   flex: 1;
-  padding-top: 70px; /* To avoid navbar overlap */
+  padding-top: 15px; /* To avoid navbar overlap */
 }
 
 h2 {

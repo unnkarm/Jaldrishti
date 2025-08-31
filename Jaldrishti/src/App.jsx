@@ -1,17 +1,32 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home/Home";
-import "slick-carousel/slick/slick.css"; 
+import Dashboard from "./Components/Dashboard/Dashboard";
+import Report from "./Components/Report/Report";
+import Map from "./Components/Map/Map";
+import Footer from "./Components/Footer/Footer";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/report" element={<Report />} />
+            <Route path="/map" element={<Map />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

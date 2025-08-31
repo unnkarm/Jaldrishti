@@ -2,8 +2,10 @@
   margin-top: 70px; /* Push below navbar */
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh; /* Changed from height to min-height */
   background: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
 
@@ -64,51 +66,118 @@
 }
 
 
-.buttons-container {
-  width: 100%;
-  padding: 2rem 0;
-  background: #ffffff;
-}
-
-
 .buttons {
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
-  max-width: 600px;
-  margin: 0 auto;
+  margin-top: 2rem;
 }
-
 
 .btn-primary, .btn-secondary {
-  padding: 12px 25px;
+  padding: 18px 40px;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 30px;
+  font-size: 1.25rem;
   font-weight: bold;
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary {
   background: #004e92;
   color: white;
+  border: 2px solid transparent;
 }
 
 .btn-primary:hover {
   background: #003366;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .btn-secondary {
-  background: #4fd1c5;
+  background: #ffffff;
   color: #002b5b;
+  border: 2px solid transparent;
 }
 
 .btn-secondary:hover {
   background: #38b2ac;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.features-section {
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  margin-top: auto; /* Push features section down if there's extra space */
+}
+
+.features-section h2 {
+  text-align: center;
+  color: #004e92;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  color: #004e92;
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px) {
   .home-content h1 {
     font-size: 3rem;       /* Responsive size for tablets/mobiles */
     line-height: 1.2;
+  }
+
+  .features-section {
+    padding: 2rem 1rem;
+  }
+
+  .features-section h2 {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
   }
 }

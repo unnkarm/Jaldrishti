@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <section className="home">
       <div className="hero-section">
-        <div className="carousel-container">
+        {/* <div className="carousel-container">
           <Carousel
             autoPlay={true}
             infiniteLoop={true}
@@ -25,7 +25,7 @@ const Home = () => {
               <img src="/src/assets/slide3.jpg" alt="Slide 3" />
             </div>
           </Carousel>
-        </div>
+        </div> */}
 
         <div className="overlay">
           <div className="home-content">
@@ -75,6 +75,31 @@ const Home = () => {
             <div className="feature-icon">✅</div>
             <h3>Verified Reports</h3>
             <p>Official validation system ensuring data accuracy and reliability for decision making</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div className="faq-grid">
+          <div className="faq-item">
+            <h3>What types of hazardous water events can I report?</h3>
+            <p>Users can report various water-related hazards including floods, water contamination, pipeline leakages, drainage issues, and water quality concerns.</p>
+          </div>
+
+          <div className="faq-item">
+            <h3>How does the real-time monitoring work?</h3>
+            <p>Our platform combines user reports, sensor data, and social media monitoring to provide up-to-the-minute information about water hazards in your area.</p>
+          </div>
+
+          <div className="faq-item">
+            <h3>Who can use the platform?</h3>
+            <p>The platform is open to citizens, government officials, and water management analysts, with different access levels and features for each role.</p>
+          </div>
+
+          <div className="faq-item">
+            <h3>How are reports verified?</h3>
+            <p>Reports undergo a multi-step verification process including AI analysis, community validation, and expert review before being marked as verified.</p>
           </div>
         </div>
       </div>

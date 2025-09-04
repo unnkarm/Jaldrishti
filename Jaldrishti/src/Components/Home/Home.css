@@ -1,31 +1,39 @@
-
 .home {
-   /* Push below navbar */
+  margin-top: 0;
   position: relative;
   width: 100%;
-  min-height: 100vh; /* Changed from height to min-height */
+  min-height: 100vh;
   background: #ffffff;
   display: flex;
+  
   flex-direction: column;
+  
+  background-image: url('../../assets/slide1.jpg');
+  background-size: cover;          /* cover full area */
+  background-position: center;     /* center the image */
+  background-repeat: no-repeat;
+  
 }
-
 
 .hero-section {
   position: relative;
+ 
+  top: 200px;
   width: 100%;
   height: 100vh;
 }
-
 
 .carousel-container {
-  width: 100%;
-  height: 100%;
+  padding-right: 5%;
+  right:0;
+  position: absolute;
+  width: 50%;
+  height: 50%;
 }
 
-
 .carousel-container img {
-  width: 100%;
-  height: 100vh;
+  width: 50%;
+  height: 50vh;
   object-fit: cover;
 }
 
@@ -33,11 +41,11 @@
 .overlay {
   
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  
+  
+  width: 50%;
+  height: 50%;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,9 +54,9 @@
 
 .home-content {
   
+  padding-left: 900px;
   
-  margin-left: 20rem;
-  margin-right: 20rem;
+  justify-content: center;
   text-align: center;
   z-index: 2;
 }
@@ -164,6 +172,50 @@
   line-height: 1.6;
 }
 
+.faq-section {
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  padding: 4rem 2rem;
+  background: #ffffff;
+}
+
+.faq-section h2 {
+  text-align: center;
+  color: #004e92;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-5px);
+}
+
+.faq-item h3 {
+  color: #004e92;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.faq-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
   .home-content h1 {
     font-size: 3rem;       /* Responsive size for tablets/mobiles */
@@ -180,5 +232,13 @@
 
   .features-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .faq-item {
+    padding: 1.5rem;
   }
 }

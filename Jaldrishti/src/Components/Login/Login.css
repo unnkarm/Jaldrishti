@@ -1,64 +1,49 @@
-.login-container {
+.auth-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #004e92 0%, #000428 100%);
+  background: white;
   padding: 20px;
   font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
 }
 
-.login-card {
+.auth-card {
   background: white;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 40px;
   width: 100%;
-  max-width: 420px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.login-header {
+.auth-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.login-header .logo {
-  width: 60px;
+.auth-header .logo {
+  font-size: 24px;
+  color: #004e92;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
   margin-bottom: 20px;
 }
 
-.login-header h1 {
+.auth-header h1 {
   color: #004e92;
-  font-size: 24px;
-  margin-bottom: 8px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-.login-header p {
+.auth-header p {
   color: #666;
   font-size: 16px;
 }
 
-.role-selector {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
-.role-btn {
-  flex: 1;
-  padding: 10px;
-  border: 2px solid #e0e0e0;
-  background: white;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.role-btn.active {
-  background: #004e92;
-  color: white;
-  border-color: #004e92;
+.auth-form {
+  margin-bottom: 20px;
 }
 
 .form-group {
@@ -76,7 +61,7 @@
   width: 100%;
   padding: 12px;
   border: 2px solid #e0e0e0;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 16px;
   transition: border-color 0.3s ease;
 }
@@ -86,53 +71,73 @@
   border-color: #004e92;
 }
 
-.sign-in-btn {
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #666;
+}
+
+.forgot-password {
+  color: #004e92;
+  text-decoration: none;
+}
+
+.auth-button {
   width: 100%;
   padding: 14px;
   background: #004e92;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 16px;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
-.sign-in-btn:hover {
+.auth-button:hover {
   background: #003366;
 }
 
-.login-footer {
-  margin-top: 25px;
+.auth-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.error-alert {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.login-footer a {
+.auth-footer {
+  text-align: center;
+  color: #666;
+}
+
+.auth-footer a {
   color: #004e92;
   text-decoration: none;
   font-weight: 500;
 }
 
-.login-footer a:hover {
+.auth-footer a:hover {
   text-decoration: underline;
 }
 
-.signup-prompt {
-  margin-top: 15px;
-  color: #666;
-}
-
 @media (max-width: 480px) {
-  .login-card {
+  .auth-card {
     padding: 25px;
-  }
-
-  .role-selector {
-    flex-direction: column;
-  }
-
-  .role-btn {
-    width: 100%;
   }
 }

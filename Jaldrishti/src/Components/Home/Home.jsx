@@ -1,109 +1,120 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { motion } from "framer-motion";
 import "./Home.css";
 
 const Home = () => {
   return (
-    <section className="home">
+    <div 
+      className="home"
+      
+    >
       <div className="hero-section">
-        {/* <div className="carousel-container">
-          <Carousel
-            autoPlay={true}
-            infiniteLoop={true}
-            interval={3000}
-            showStatus={false}
-            showThumbs={false}
+        <motion.div 
+          className="content-box"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <div className="hero-content">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              Welcome to Jal Drishti!
+            </motion.h1>
+            <motion.p
+              className="hero-description"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              Monitor water hazards in real-time with our comprehensive safety
+              platform. Get instant alerts, track current conditions, and contribute to
+              water safety across Indian waters.
+            </motion.p>
+            <motion.button
+              className="get-started-btn"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get Started
+            </motion.button>
+          </div>
+
+          <motion.div
+            className="live-data-container"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <div>
-              <img src="/src/assets/slide1.jpg" alt="Slide 1" />
+            <div className="live-data-header">
+              <motion.span
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                ⚡
+              </motion.span>
+              <h3>Live Water Data</h3>
             </div>
-            <div>
-              <img src="/src/assets/slide2.jpg" alt="Slide 2" />
-            </div>
-            <div>
-              <img src="/src/assets/slide3.jpg" alt="Slide 3" />
-            </div>
-          </Carousel>
-        </div> */}
-
-        <div className="overlay">
-          <div className="home-content">
-            <h1>Welcome to Jaldrishti</h1>
-            <div className="buttons">
-              <a href="/report" className="btn-primary">Report Hazard</a>
-              <a href="/dashboard" className="btn-secondary">View Dashboard</a>
-            </div>
-          </div>
-        </div>
+            <motion.div 
+              className="stats-grid"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+            >
+              {/* Your existing stats content */}
+            </motion.div>
+          </motion.div>
+        </motion.div>
       </div>
 
-      <div className="features-section">
-        <h2>Our Platform Features</h2>
-        <div className="features-grid">
-          <div className="feature-card">
-            <div className="feature-icon">📱</div>
-            <h3>Citizen Reporting</h3>
-            <p>Simple mobile-first interface for reporting water hazards with photo uploads and automatic GPS location</p>
-          </div>
+      <motion.div
+        className="how-to-use"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+      >
+        <motion.h2>How to Use the Platform</motion.h2>
+        
+      </motion.div>
 
-          <div className="feature-card">
-            <div className="feature-icon">📊</div>
-            <h3>Real-time Analytics</h3>
-            <p>Interactive dashboards with map visualization, social media monitoring, and trend analysis</p>
-          </div>
+      <div className="info-rows">
+        <motion.div 
+          className="info-row"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h3>Real-time Monitoring</h3>
+          <p>Our advanced monitoring system provides up-to-the-minute data on water conditions across India. Using state-of-the-art sensors and satellite technology, we track water levels, flow rates, and potential hazards to ensure you have the most accurate information available.</p>
+        </motion.div>
 
-          <div className="feature-card">
-            <div className="feature-icon">🤖</div>
-            <h3>AI Intelligence</h3>
-            <p>Smart assistant that analyzes patterns, sentiment, and provides actionable insights</p>
-          </div>
+        <motion.div 
+          className="info-row"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <h3>Community-Driven Alerts</h3>
+          <p>Join a network of active citizens contributing to water safety. Our platform enables users to report hazards, verify conditions, and share critical updates. Together, we create a more responsive and effective water monitoring system.</p>
+        </motion.div>
 
-          <div className="feature-card">
-            <div className="feature-icon">👥</div>
-            <h3>Multi-Role Access</h3>
-            <p>Tailored interfaces for citizens, officials, and analysts with appropriate access controls</p>
-          </div>
-
-          <div className="feature-card">
-            <div className="feature-icon">🚨</div>
-            <h3>Emergency Alerts</h3>
-            <p>Automated hazard detection and notification system for rapid community response</p>
-          </div>
-
-          <div className="feature-card">
-            <div className="feature-icon">✅</div>
-            <h3>Verified Reports</h3>
-            <p>Official validation system ensuring data accuracy and reliability for decision making</p>
-          </div>
-        </div>
+        <motion.div 
+          className="info-row"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h3>Data-Driven Decision Making</h3>
+          <p>Transform raw data into actionable insights. Our analytics tools help authorities and communities make informed decisions about water management, emergency response, and infrastructure planning.</p>
+        </motion.div>
       </div>
-
-      <div className="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div className="faq-grid">
-          <div className="faq-item">
-            <h3>What types of hazardous water events can I report?</h3>
-            <p>Users can report various water-related hazards including floods, water contamination, pipeline leakages, drainage issues, and water quality concerns.</p>
-          </div>
-
-          <div className="faq-item">
-            <h3>How does the real-time monitoring work?</h3>
-            <p>Our platform combines user reports, sensor data, and social media monitoring to provide up-to-the-minute information about water hazards in your area.</p>
-          </div>
-
-          <div className="faq-item">
-            <h3>Who can use the platform?</h3>
-            <p>The platform is open to citizens, government officials, and water management analysts, with different access levels and features for each role.</p>
-          </div>
-
-          <div className="faq-item">
-            <h3>How are reports verified?</h3>
-            <p>Reports undergo a multi-step verification process including AI analysis, community validation, and expert review before being marked as verified.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 };
 

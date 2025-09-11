@@ -6,7 +6,7 @@
   width: 90%;
   max-width: 1400px;
   height: 70px;
-  background: rgba(0, 0, 0, 0.95);
+  background: #1e2735;
   backdrop-filter: blur(10px);
   
   display: flex;
@@ -29,10 +29,13 @@
 }
 
 .logo a {
+  display: flex;
   text-decoration: none;
   color: #ffffff;
 }
-
+.logo-text{
+  margin-top: 10px;
+}
 .nav-links {
     padding: 0 20px;
   list-style: none;
@@ -42,6 +45,7 @@
 }
 
 .nav-links li a {
+  
   color: #ffffff;
   text-decoration: none;
   font-size: 1rem;
